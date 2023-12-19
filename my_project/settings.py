@@ -79,11 +79,12 @@ DATABASES = {
         # 'ENGINE': 'django.db.backends.sqlite3',
         # 'NAME': BASE_DIR / 'db.sqlite3',
        'ENGINE': 'django.db.backends.postgresql',
-       'NAME':'park',
+       'NAME':'railway',
        'USER':'postgres',
-       'PASSWORD':'nandhu',
-       'HOST':'localhost',
-       'PORT':'5432'
+       'PASSWORD':'ebf1aDb55DBADf5g1Gd-43BFaGaC14A6',
+       'HOST':'viaduct.proxy.rlwy.net',
+       'PORT':'24291',
+     'DATABASE_URL' :'postgresql://postgres:ebf1aDb55DBADf5g1Gd-43BFaGaC14A6@viaduct.proxy.rlwy.net:24291/railway'
     }
 }
 
