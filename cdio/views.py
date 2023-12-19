@@ -1,4 +1,5 @@
 # from django.shortcuts import render,redirect
+import django
 from django.http import HttpResponse
 # # from .models import login_record,signup
 from django.contrib.auth.models import User
@@ -8,6 +9,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth import login, authenticate,logout
+from .models import RegUser
 
  
 
@@ -20,13 +22,23 @@ def register(request):
     if request.method == "POST":
         if request.POST.get('submit') == 'register':
             username= request.POST.get['username']
-            email= request.POST['email']
-            password1= request.POST.get['password1']
-            password2= request.POST.get['password2']
+            department= request.POST.get['department']
+            password= request.POST.get['password1']
+            con_password= request.POST.get['password2']
 
-            data= User.objects.create_user(username=username,email=email,password=password1)
-            data.save()
-            return HttpResponse("<h1>successfully registration your data</h2>")
+            user = RegUser.objects.filter(Department = department)
+            if user :
+                messages = "user alresdy exists"
+                return render (request,"register.html",{'msg':messages})
+            else:
+                if password == con_password:
+                    newuser = RegUser.objects.create(username=username,department= department,password=password,con_password=con_password)
+                    return redirect ("dashbord") 
+                else:
+                    return redirect("home")
+            # data= User.objects.create_user(username=username,email=email,password=password1)
+            # data.save()
+            # return HttpResponse("<h1>successfully registration your data</h2>")
         print("thanks")
         # pro= request.POST['sign'] 
         # password_s= request.POST['password_s']
@@ -81,16 +93,34 @@ def login2(request):
 
 def signup(request):
     if request.method == "POST":
-        username= request.POST['username']
-        department= request.POST['email']
-        password1= request.POST['password1']
-        password2=  request.POST['password2']
-        if len(username)<=8:
-            data= User.objects.create_user(username=username,email=department,password=password1)
-            data.save()
-            print("thanks")
+        username=   request.POST['username']
+        department= request.POST['department']
+        password=  request.POST['password1']
+        con_password=  request.POST['password2']
+       
+        data= User.objects.create_user(username=username,email=department,password=password)
+        # user= RegUser.objects.filter(Email = department)
+        data.save()
+       # try:
+        #     data.save()
+        # except django.db.utils.IntegrityError:
+        #     messages = "user alresdy exists"
+        #     data.save()
+        #     return render (request,"register.html",{'msg':messages})
+        
+        # return redirect ("login")
+        # print("thanks") 
             
-    
+    #     user = User.objects.filter(username= username)
+    #     if user:
+    #         messages = "user alresdy exists"
+    #         return render (request,"register.html",{'msg':messages})
+    #     else:
+    #         if password == con_password:
+    #             newuser = User.objects.create(username=username,department= department,password=password,con_password=con_password)
+    #             return redirect ("dashbord") 
+    #         else:
+    #             return redirect("home")
     return render (request,"register.html")
 def check(request):
     
