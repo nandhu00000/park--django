@@ -325,17 +325,16 @@ span{
     margin-bottom: 20px;
 }
 .dep{
-    margin-left:200px ; 
-     display: flex;
-    margin: 0; 
-    margin-top: 30px;
-    
+    margin-left:180px; 
+    margin-right: 180px;
+    animation: change 8s infinite;
     
 }
 .d{
     margin-bottom: 30px;
 }
 .popcon{
+   
     display: block;
     color: white;
     font-weight: 200vh;
@@ -673,7 +672,7 @@ span{
     .prodetail{
 
     
-    
+     
         margin-left:40px ;
     }
 
@@ -703,10 +702,8 @@ span{
   
 }}
 @media(max-width:525px){
-  .prodetail{
-
-    
-    height: 100px;
+  .prodetail{  
+    height: 200px;
     width: 350px;
   
     background-color:#d5d5d5;
@@ -719,7 +716,7 @@ span{
   
 .staff-png{
     border-radius:100%;
-    margin-left: 34%;
+    margin-left: 32%;
 }
   
   
