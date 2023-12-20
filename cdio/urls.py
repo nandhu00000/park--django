@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.urls import path,include
 from . import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -14,5 +15,8 @@ urlpatterns = [
     path('logout', views.sign_out, name='logout'),
     path('syllubus', views.syll),
     
+
+    
     
 ]
+urlpatterns += staticfiles_urlpatterns() # new
