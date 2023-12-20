@@ -16,8 +16,8 @@ from .models import RegUser
 # Create your views here.
 
 def home (request):
-    #  return render (request,"index.html")
-    return HttpResponse("<h1>successfully logined yuor data</h2>")
+    return render (request,"cdio/index.html")
+    # return HttpResponse("<h1>successfully logined yuor data</h2>")
 
 def register(request):
     if request.method == "POST":
