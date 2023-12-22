@@ -110,9 +110,10 @@ img{
      padding-top: 40px;
 }
 
-/* @media(max-width: 380px) {
+ @media(max-width: 525px) {
     .wrapper {
         margin: 30px 20px;
         padding: 40px 15px 15px 15px;
  
-    } */
+    } 
+ }
