@@ -755,6 +755,11 @@ span{
        display: none;
 
     }
+    .dep {
+    
+        margin-left: 132px ;
+        margin-top: 10px;
+    }
 
     .navbar div h3{
     display: inline;
