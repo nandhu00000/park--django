@@ -141,7 +141,7 @@ img{
        
  }
 
- @media(max-width: 391px) {
+ @media(max-width: 390px) {
     .wrapper {
         max-width: 600;
         height: 900px;
