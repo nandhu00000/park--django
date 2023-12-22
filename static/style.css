@@ -324,11 +324,9 @@ body{
 span{
     margin-bottom: 20px;
 }
-.dep{
-    margin-left:180px; 
-    margin-right: 180px;
-    animation: change 8s infinite;
-    
+
+.dep {
+    margin-left: 132px;
 }
 .d{
     margin-bottom: 30px;
@@ -338,7 +336,7 @@ span{
     display: block;
     color: white;
     font-weight: 200vh;
-    padding-right: 200px;
+    padding-right: 20px;
 }
 .quetion{
    text-transform: uppercase;
@@ -703,12 +701,12 @@ span{
 }}
 @media(max-width:525px){
   .prodetail{  
-    height: 200px;
-    width: 350px;
+    height: 180px;
+    width: 380px;
   
     background-color:#d5d5d5;
     border-radius: 40px;
-    margin-left:20px ;
+    margin-left:10px ;
     padding-top: 20px;
     margin-top: 40px;
     margin-bottom: 40px;
@@ -725,7 +723,7 @@ span{
     padding-left: 40px;
     color: #901d78 ;
     opacity: 0.7;
-    letter-spacing: 1px;
+    letter-spacing: normal;
     
 }
 .prodetail h3 span{
