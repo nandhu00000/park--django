@@ -326,8 +326,11 @@ span{
 }
 
 .dep {
-    margin-left: 132px;
+    
+    margin-left: 197px;
+    margin-top: 10px;
 }
+
 .d{
     margin-bottom: 30px;
 }
@@ -766,7 +769,7 @@ span{
     margin-left:30px;
     margin-top: 25px;
     
-    animation: change 8s infinite;
+    /* animation: change 8s infinite; */
     
   
 }}}
