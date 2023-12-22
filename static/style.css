@@ -676,6 +676,12 @@ span{
     
      
         margin-left:40px ;
+    
+    }
+    .dep {
+    
+        margin-left: 132px ;
+        margin-top: 10px;
     }
 
   
@@ -697,7 +703,11 @@ span{
     color:black;
     letter-spacing: 2px;
 }
-  
+.dep {
+    
+    margin-left: 132px ;
+    margin-top: 10px;
+}
   .join{
      background-color: rgb(110, 187, 255);
      margin-left: 50%;
