@@ -124,6 +124,20 @@ img{
         border-radius: 15px;
         box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
     }
+    .wrapper .form-field input {
+        width: 100%;
+        display: block;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 1.2rem;
+        color: #666;
+        padding: 20px 35px 20px 30px;
+        margin-top: 70px;
+        margin-bottom: 100px;
+        /* border: 1px solid red; */
+    }
+       
        
  }
 
