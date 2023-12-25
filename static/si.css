@@ -26,6 +26,14 @@ input {
   top: 0;
   left: 0;
 }
+.song{
+  background-color: green;
+  padding: 10px;
+  color: white;
+  font-weight: 100vh;
+  border-radius: 3px;
+}
+
 
 .signin-signup {
   position: absolute;
@@ -380,6 +388,13 @@ a{
     top: 5%;
     transform: translate(-50%, 0);
   }
+}
+.sus{
+  background-color: green;
+  padding: 10px;
+  color: white;
+  font-weight: 100vh;
+  border-radius: 3px;
 }
 
 @media (max-width: 570px) {

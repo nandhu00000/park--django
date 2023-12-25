@@ -99,9 +99,15 @@ def signup(request):
         password=  request.POST['password1']
         con_password=  request.POST['password2']
        
-        data= User.objects.create_user(username=username,email=department,password=password)
+        # data= User.objects.create_user(username=username,email=department,password=password)
         # user= RegUser.objects.filter(Email = department)
-        data.save()
+        if password != con_password:
+            messages.success(request,"password does not match")
+            return render (request,"register.html")
+        else:
+            data= User.objects.create_user(username=username,email=department,password=password)
+            data.save()
+            return render (request,"home")
        # try:
         #     data.save()
         # except django.db.utils.IntegrityError:
